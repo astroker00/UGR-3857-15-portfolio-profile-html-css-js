@@ -1,0 +1,681 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:#56d856;
+    color: #242424;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column; /* Ensures all elements stack vertically */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+header .menu-icon,
+header .search-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #242424;
+    position: absolute;
+    top: 1rem; /* Aligns them properly within the header */
+}
+
+header .menu-icon {
+    left: 1rem;
+}
+header .search-icon {
+    right: 1rem;
+}
+#nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+#nav-menu.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+/* Search Bar */
+.search-bar {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.search-bar.hidden {
+    display: none;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 0.5rem 1rem;
+    background-color: #56d856;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #45b845;
+}
+
+
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+header nav a {
+    color: #242424;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+.active {
+    color:#242424;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color:#333333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+}
+
+section.dark-mode {
+    background-color: #2c2c2c;
+}
+
+footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.theme-toggle span {
+    transition: transform 0.3s ease;
+}
+
+body.dark-mode #theme-icon {
+    transform: rotate(180deg);
+}
+
+
+/* Main Styling */
+.about-me, .hobby-box, .education-content, .cv-article, .references, .adventure-article{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.about-me {
+    max-width: 800px;
+    background-color: #eeffe5; /* Updated box background color */
+    box-shadow: 0 2px 4px rgba(106, 255, 0, 0.1);
+    border-radius: 4px;
+    padding: 2rem;
+    margin: 1rem auto; /* Adds space below the fixed header */
+    justify-content: space-evenly;
+}
+.my-photo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    
+.my-photo img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+.my-photo figcaption {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: #555;
+        text-align: center;
+    }
+
+/* Hobbies Section */
+.hobby-box {
+    max-width: 800px;
+    background-color: #eeffe5; /* Updated box background color */
+    box-shadow: 0 2px 4px rgba(106, 255, 0, 0.1);
+    border-radius: 4px;
+    padding: 2rem;
+    margin: 1rem auto; /* Adds space below the fixed header */
+    justify-content: space-evenly;
+}
+
+.hobby-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hobby-box p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Captured Moments */
+.captured-moments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.captured-moments img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.captured-moments figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Favorite Music */
+.favorite-music {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.custom-audio {
+    width: 100%;
+    max-width: 400px;
+    color: #333;
+    background-color: #f9fff9; /* Light green box *
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.5rem; /* Optional padding */
+}
+
+.favorite-music figure {
+    width: 100%;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+
+.favorite-music figcaption {
+    text-align:center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+.education-content {
+    max-width: 800px;
+    background-color: #eeffe5; /* Updated box background color */
+    box-shadow: 0 2px 4px rgba(106, 255, 0, 0.1);
+    border-radius: 4px;
+    padding: 2rem;
+    margin: 1rem auto; /* Adds space below the fixed header */
+    justify-content: space-evenly;
+}
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    th, td {
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    td {
+        text-align:left;
+    }
+
+    .cv-article {
+        display: grid;
+        margin-bottom: 2rem;
+        background-color: #eeffe5;
+    }
+    
+    .cv-article h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 0.3rem;
+    }
+    
+    .cv-article p, .cv-article li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .cv-article ul {
+        list-style-type: disc;
+        margin-left: 1.5rem;
+    }
+    
+    .references, .contact-info {
+        margin-bottom: 2rem;
+        background-color:#eeffe5;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    .references h3, .contact-info h3 {
+        font-size: 1.5rem;
+        color:#333333;
+        margin-bottom: 0.5rem;
+    }
+    
+    .references p, .contact-info p {
+        margin-bottom: 0.5rem;
+    }
+    
+    .references a, .contact-info a {
+        color: #006080;
+        text-decoration: none;
+    }
+    
+    .references a:hover, .contact-info a:hover {
+        text-decoration: underline;
+    }
+    .fas.fa-envelope {
+        color: #ff6f91; /* Pinkish red color */
+       
+    }
+    .fas.fa-phone-alt {
+        color:#56d856;
+        
+    }
+    .fab.fa-linkedin {
+        color:#0077b5;
+        
+    }
+    .fab.fa-instagram {
+        color:#ff6f91;
+        
+    }
+.adventure-article {
+    margin-bottom: 2rem;
+    background-color: #eeffe5;
+}
+
+.adventure-article h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+
+.adventure-article p, .adventure-article li {
+    margin-bottom: 0.5rem;
+}
+
+.adventure-article ul, .adventure-article ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.adventure-images {
+    margin-top: 2rem;
+    overflow-x: auto;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.adventure-images figure {
+    min-width: 150px;
+    text-align: center;
+    flex: 0 0 auto;
+}
+
+.adventure-images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.adventure-images figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+.adventure-video, .adventure-audio {
+    margin-top: 2rem;
+}
+
+.adventure-video h3, .adventure-audio h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.adventure-video video, .adventure-audio audio {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+}
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #56d856;
+    color: #242424;
+    width: 100%;
+    position: static;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+#scrollToTop:hover {
+    background-color: #eeffe5;
+    color:#eeffe5;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+/* Mobile Portrait (390px) */
+/* Media Query for Phone Portrait (390px width) */
+@media (max-width: 390px) {
+    header {
+        flex-direction: row; /* Switches header elements to row for better fit */
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem; /* Adjust padding */
+    }
+
+    header h1 {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+        margin: 0;
+    }
+
+    header nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 0.5rem;
+        display: none; /* Initially hide for menu functionality */
+        position: absolute;
+        top: 3rem; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: #56d856;
+        z-index: 999;
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header .menu-icon,
+    header .search-icon {
+        font-size: 1.4rem; /* Adjust icon size */
+        color: #fff;
+    }
+
+    header .menu-icon {
+        position: static; /* Ensures correct alignment */
+    }
+
+    header .search-icon {
+        position: static; /* Ensures correct alignment */
+    }
+
+    .search-bar {
+        top: auto; /* Prevents overlap with the header */
+        position: static;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #nav-menu {
+        transition: none; /* Removes transitions for simplicity */
+    }
+}
+
+/* Mobile Landscape (917px) */
+@media (max-width: 917px) {
+    body {
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    header nav {
+        gap: 1rem;
+    }
+
+    .menu-icon,
+    .search-icon {
+        font-size: 1.6rem;
+    }
+
+    .about-me,
+    .hobby-box,
+    .education-content {
+        padding: 1.8rem;
+    }
+
+    .captured-moments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adventure-images {
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+}
+
+/* Tablet Portrait (768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav {
+        gap: 1.2rem;
+    }
+
+    .menu-icon,
+    .search-icon {
+        font-size: 1.8rem;
+    }
+
+    .about-me,
+    .hobby-box,
+    .education-content {
+        padding: 2rem;
+    }
+
+    .captured-moments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .adventure-images {
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+}
+
+/* Tablet Landscape (1280px) */
+@media (max-width: 1280px) {
+    body {
+        font-size: 17px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav {
+        gap: 1.5rem;
+    }
+
+    .menu-icon,
+    .search-icon {
+        font-size: 2rem;
+    }
+
+    .about-me,
+    .hobby-box,
+    .education-content {
+        padding: 2.5rem;
+    }
+
+    .captured-moments {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .adventure-images {
+        flex-direction: row;
+        padding: 2rem 0;
+    }
+}
+
+/* Desktop (1440px) */
+@media (max-width: 1440px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header nav {
+        gap: 2rem;
+    }
+
+    .menu-icon,
+    .search-icon {
+        font-size: 2.2rem;
+    }
+
+    .about-me,
+    .hobby-box,
+    .education-content {
+        padding: 3rem;
+    }
+
+    .captured-moments {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .adventure-images {
+        flex-direction: row;
+        padding: 2rem 0;
+    }
+}
+
+

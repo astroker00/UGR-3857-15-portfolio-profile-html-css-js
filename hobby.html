@@ -8,30 +8,44 @@
 </head>
 <body>
     <header>
-        <h1>Abubeker Juhar</h1>
-        <nav>
+        
+            <span class="menu-icon" id="menu-icon">☰</span> <!-- Menu Icon -->
+            <h1>Abubeker Juhar</h1>
+            <span id="search-icon" class="search-icon">🔍</span> <!-- Search Icon -->
+<div id="search-bar" class="search-bar hidden">
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input" placeholder="Search..." />
+    <button id="search-button">Search</button>
+</div>
+ <!-- Search Icon -->
+        <nav id="nav-menu">
             <a href="index.html">Home</a>
-            <a href="hobby.html">Hobbies</a>
+            <a href="hobby.html" class="active">Hobbies</a>
             <a href="education.html">Education</a>
-            <a href="cv.html">CV</a>
+            <a href="CV.html">CV</a>
             <a href="adventures.html">Adventures</a>
         </nav>
     </header>
-    <main>
+    
+    <main id="main-content">
         <section>
             <h2>My Hobbies</h2>
-        
+        <div class="hobbies-container">
+            <div class="hobby-box">
             <article class="hobby-article">
                 <h3>Astronomy and the Universe</h3>
                 <p>I have a deep passion for astronomy; exploring the mysteries of the universe gives me a profound sense of purpose. There’s something incredibly awe-inspiring about the vastness and beauty of nature beyond our world. My journey in astronomy even led me to create a Telegram channel where I shared fascinating lessons and facts with over 10,000 subscribers.</p>
                 <p>If you're looking to spark your own interest, I highly recommend checking out the work of Neil deGrasse Tyson, especially his series like <em>StarTalk</em> and <em>Cosmos</em>. These resources bring the wonders of space closer to home.</p>
             </article>
-        
+            </div>
+            <div class="hobby-box">
             <article class="hobby-article">
                 <h3>Horse Riding</h3>
                 <p>Horse riding has been an activity I love, though I can’t quite explain why! There’s a freedom and connection to nature that comes with it, and I dream of opening my own training facility someday. Here, I could share the joys of horse riding and inspire others to explore it.</p>
                 <p>For anyone in Addis Ababa, local spots like Abo and places in Debre Zeyit, such as Adulala Resort, offer great opportunities to try it out!</p>
             </article>
+            </div>
+        </div>
         </section>
 
         <section>
@@ -49,32 +63,36 @@
         
         <section>
             <h2>Favorite Music</h2>
+            <div class="favorite-music">
             <figure>
-                <audio controls>
+                <audio controls class="custom-audio">
                     <source src="audios/audio1.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <figcaption>Track 1</figcaption>
             </figure>
             <figure>
-                <audio controls>
+                <audio controls class="custom-audio">   
                     <source src="audios/audio2.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <figcaption>Track 2</figcaption>
             </figure>
             <figure>
-                <audio controls>
+                <audio controls class="custom-audio">   
                     <source src="audios/audio3.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <figcaption>Track 3</figcaption>
             </figure>
+            </div>
         </section>
         
     </main>
     <footer>
         <p>© 2024 Your Name. All rights reserved.</p>
     </footer>
+    <script src="portfolio.js"></script>
 </body>
 </html>
+

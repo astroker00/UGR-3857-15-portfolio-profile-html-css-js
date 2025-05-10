@@ -8,30 +8,45 @@
 </head>
 <body>
     <header>
+        
+        <span class="menu-icon" id="menu-icon">☰</span> <!-- Menu Icon -->
         <h1>Abubeker Juhar</h1>
-        <nav>
-            <a href="index.html">Home</a>
+        <span id="search-icon" class="search-icon">🔍</span> <!-- Search Icon -->
+<div id="search-bar" class="search-bar hidden">
+    <label for="search-input">Search:</label>
+    <input type="text" id="search-input" placeholder="Search..." />
+    <button id="search-button">Search</button>
+</div>
+ <!-- Search Icon -->
+        <nav id="nav-menu">
+            <a href="index.html" class="active">Home</a>
             <a href="hobby.html">Hobbies</a>
             <a href="education.html">Education</a>
-            <a href="cv.html">CV</a>
+            <a href="CV.html">CV</a>
             <a href="adventures.html">Adventures</a>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section>
+           <div class="about-me">
             <h2>About Me</h2>
             <p>Hello! I'm Abubeker Juhar, a 3rd-year Software Engineering student at AAiT. I'm passionate about creating impactful software that brings value to businesses and users alike.</p>
             <p>With a solid foundation in development, I'm proficient in Python, Java, JavaScript, and other backend technologies. My goal is to design and build practical, business-focused software solutions that meet real-world needs.</p>
             <p>I've had the opportunity to work on several development projects, including collaborations with INSA, where I applied my skills to real-life applications. Additionally, I've developed some personal projects to sharpen my skills and explore innovative solutions.</p>
+            <div class="my-photo">
             <figure>
-                <img src="images\Myphoto.jpg" height="150" width="150" alt="Myphoto">
+                <img src="images/Myphoto.jpg" alt="Myphoto">
                 <figcaption>A bit about me!</figcaption>
             </figure>
+            </div>
+            </div>
         </section>
-        
     </main>
     <footer>
-        <p>© 2024 Abubeker Juhar Bedru. All rights reserved.</p>
+        <span class="all right reserved">© 2024 Abubeker Juhar Bedru. All rights reserved.</span>
     </footer>
+    
+    
+    <script src="portfolio.js"></script>
 </body>
 </html>

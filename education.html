@@ -26,21 +26,30 @@
 </head>
 <body>
     <header>
-        <h1>Abubker Juhar</h1>
-        <nav>
+        <span class="menu-icon" id="menu-icon">☰</span> <!-- Menu Icon -->
+        <h1>Abubeker Juhar</h1>
+        <span id="search-icon" class="search-icon">🔍</span> <!-- Search Icon -->
+        <div id="search-bar" class="search-bar hidden">
+            <label for="search-input">Search:</label>
+            <input type="text" id="search-input" placeholder="Search..." />
+            <button id="search-button">Search</button>
+        </div>
+         <!-- Search Icon -->
+        <nav id="nav-menu">
             <a href="index.html">Home</a>
             <a href="hobby.html">Hobbies</a>
-            <a href="education.html">Education</a>
-            <a href="cv.html">CV</a>
+            <a href="education.html" class="active">Education</a>
+            <a href="CV.html">CV</a>
             <a href="adventures.html">Adventures</a>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section>
             <h2>My Education</h2>
         
             <!-- University Education -->
             <article class="education-article">
+                <div class="education-content">
                 <h3>Software Engineering at AAiT</h3>
                 <p>I am currently a 3rd-year Software Engineering student at AAiT, building a strong foundation in both technical skills and development principles.</p>
                 
@@ -81,13 +90,15 @@
                         <th>3.83</th>
                     </tr>
                 </table>
+                </div>
             </article>
-        
+        <div class="education-content">
             <!-- High School Education -->
             <article class="education-article">
                 <h3>High School: Spring of Knowledge Academy</h3>
                 <p>I attended Spring of Knowledge Academy for high school, where my early interests in technology and software development were formed, preparing me for my university studies.</p>
             </article>
+        </div>
         </section>
 
         <!-- Documents Showcase Section -->
@@ -111,5 +122,6 @@
     <footer>
         <p>© 2024 Abubker Juhar. All rights reserved.</p>
     </footer>
+    <script src="portfolio.js"></script>
 </body>
 </html>

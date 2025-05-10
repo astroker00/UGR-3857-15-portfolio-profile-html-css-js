@@ -10,27 +10,37 @@
 </head>
 <body>
     <header>
+        <span class="menu-icon" id="menu-icon">☰</span> <!-- Menu Icon -->
         <h1>Abubeker Juhar</h1>
-        <nav>
+        <span id="search-icon" class="search-icon">🔍</span> <!-- Search Icon -->
+<div id="search-bar" class="search-bar hidden">
+    <label for="search-input">Search:</label>
+   <input type="text" id="search-input" placeholder="Search..." />
+    <button id="search-button">Search</button>
+</div>
+ <!-- Search Icon -->
+        <nav id="nav-menu">
             <a href="index.html">Home</a>
             <a href="hobby.html">Hobbies</a>
             <a href="education.html">Education</a>
-            <a href="cv.html">CV</a>
+            <a href="CV.html" class="active">CV</a>
             <a href="adventures.html">Adventures</a>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section>
+           
             <h2>Curriculum Vitae</h2>
-        
+            <div class="cv-container">
             <!-- Objective Statement -->
             <article class="cv-article">
                 <h3>Objective</h3>
                 <p>I am passionate about contributing to impactful development projects and aspire to create my own software solutions that address real-world problems. I aim to leverage my technical skills and collaborative abilities to make meaningful contributions to the software engineering field.</p>
             </article>
-        
+            </div>
             <!-- Work Experience -->
             <article class="cv-article">
+                <div class="cv-container">
                 <h3>Work Experience</h3>
                 <ul>
                     <li>
@@ -59,20 +69,24 @@
                         <p>Designed and developed websites for clients across various sectors, delivering modern and responsive sites tailored to their business needs.</p>
                     </li>
                 </ul>
+                </div>
             </article>
         
             <!-- Skills -->
             <article class="cv-article">
+                <div class="cv-container">
                 <h3>Skills</h3>
                 <ul>
                     <li><strong>Problem Solving:</strong> Adept at analyzing complex problems from multiple perspectives, allowing me to identify innovative solutions. I excel in tackling challenges with a logical approach and enjoy breaking down issues into manageable steps.</li>
                     <li><strong>Collaboration:</strong> Experienced in working within diverse teams, which has enhanced my ability to communicate effectively, understand different viewpoints, and contribute constructively to shared goals.</li>
                     <li><strong>Technical Skills:</strong> Proficient in Python, Java, JavaScript, and backend development; experienced with frameworks such as Django and React.</li>
                 </ul>
+                </div>
             </article>
         
             <!-- Certifications -->
             <article class="cv-article">
+                <div class="cv-container">
                 <h3>Certifications</h3>
                 <ul>
                     <li>Software Development Certification - INSA</li>
@@ -80,9 +94,11 @@
                     <li>Advanced Web Development - Addis Web Institute</li>
                     <li>Project Management Basics - TechSpace Academy</li>
                 </ul>
+                </div>
             </article>
             <!-- References -->
 <article class="references">
+    <div class="cv-container">
     <h3>References</h3>
     <p>
         <i class="fab fa-github"></i> 
@@ -92,10 +108,12 @@
         <i class="fas fa-code"></i> 
         LeetCode: <a href="https://leetcode.com/Astroker/" target="_blank">leetcode.com/Astroker</a>
     </p>
+    </div>
 </article>
 
 <!-- Contact Information -->
 <article class="contact-info">
+    <div class="cv-container">
     <h3>Contact Information</h3>
     <p>
         <i class="fas fa-envelope"></i> 
@@ -113,6 +131,7 @@
         <i class="fab fa-instagram"></i> 
         Instagram: <a href="https://instagram.com/astroker00" target="_blank">@astroker00</a>
     </p>
+    </div>
 </article>
 
         
@@ -121,5 +140,6 @@
     <footer>
         <p>© 2024 Abubeker Juhar. All rights reserved.</p>
     </footer>
+    <script src="portfolio.js"></script>
 </body>
 </html>

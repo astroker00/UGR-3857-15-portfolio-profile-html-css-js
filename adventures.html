@@ -8,27 +8,39 @@
 </head>
 <body>
     <header>
-        <h1>Abubker Juhar</h1>
-        <nav>
+        <span class="menu-icon" id="menu-icon">☰</span> <!-- Menu Icon -->
+        <h1>Abubeker Juhar</h1>
+        <span id="search-icon" class="search-icon">🔍</span> <!-- Search Icon -->
+<div id="search-bar" class="search-bar hidden">
+    <label for="search-input">Search:</label>
+   <input type="text" id="search-input" placeholder="Search..." />
+    <button id="search-button">Search</button>
+</div>
+ <!-- Search Icon -->
+
+        <nav id="nav-menu">
             <a href="index.html">Home</a>
             <a href="hobby.html">Hobbies</a>
             <a href="education.html">Education</a>
-            <a href="cv.html">CV</a>
-            <a href="adventures.html">Adventures</a>
+            <a href="CV.html">CV</a>
+            <a href="adventures.html" class="active">Adventures</a>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <section>
             <h2>My Adventures</h2>
         
             <!-- Introduction -->
             <article class="adventure-article">
+                <div class="adventure-content">
                 <h3>Exploring New Horizons</h3>
                 <p>Adventure has always been a part of my life. Whether it's seeking new experiences or challenging myself to step outside my comfort zone, I believe each adventure shapes me in unexpected ways.</p>
+                </div>
             </article>
         
             <!-- Past Adventures -->
             <article class="adventure-article">
+                <div class="adventure-content">
                 <h3>Past Adventures</h3>
                 <ul>
                     <li>Horse riding across the scenic landscapes of Debre Zeyit.</li>
@@ -36,10 +48,12 @@
                     <li>A weekend hiking expedition in the Simien Mountains.</li>
                     <li>Astronomy camping events organized with friends and fellow enthusiasts.</li>
                 </ul>
+                </div>
             </article>
         
             <!-- Future Adventure Goals -->
             <article class="adventure-article">
+                <div class="adventure-content">
                 <h3>Future Adventure Goals</h3>
                 <p>Here are some adventures I’d love to embark on in the near future, in order of priority:</p>
                 <ol>
@@ -48,29 +62,30 @@
                     <li>Visit the Ethiopian Space Science Society for an exclusive astronomy event.</li>
                     <li>Plan a journey to a dark-sky reserve for a truly immersive stargazing experience.</li>
                 </ol>
+                </div>
             </article>
         
            <!-- Images Section -->
 <article class="adventure-images">
     <h3>Images</h3>
     <figure>
-        <img src="images/image7.jpg" alt="Horse riding in the scenic landscapes of Debre Zeyit">
+        <img src="images/image7.jpg" alt="Horse riding in the scenic landscapes of Debre Zeyit" height="150" width="150" >
         <figcaption>Horse riding through Debre Zeyit's beautiful landscapes.</figcaption>
     </figure>
     <figure>
-        <img src="images/image8.jpg" alt="Stargazing under a clear sky">
+        <img src="images/image8.jpg" alt="Stargazing under a clear sky" height="150" width="150">
         <figcaption>Stargazing in the countryside on a clear night.</figcaption>
     </figure>
     <figure>
-        <img src="images/image9.jpg" alt="Hiking the Simien Mountains">
+        <img src="images/image9.jpg" alt="Hiking the Simien Mountains" height="150" width="150">
         <figcaption>Hiking the rugged terrain of the Simien Mountains.</figcaption>
     </figure>
     <figure>
-        <img src="images/image10.jpg" alt="Astronomy camping trip with friends">
+        <img src="images/image10.jpg" alt="Astronomy camping trip with friends" height="150" width="150">
         <figcaption>Camping under the stars with fellow astronomy enthusiasts.</figcaption>
     </figure>
     <figure>
-        <img src="images/image11.jpg" alt="Stargazing at a dark-sky reserve">
+        <img src="images/image11.jpg" alt="Stargazing at a dark-sky reserve" height="150" width="150">
         <figcaption>Stargazing at a dark-sky reserve for an immersive experience.</figcaption>
     </figure>
 </article>
@@ -103,5 +118,6 @@
     <footer>
         <p>© 2024 Your Name. All rights reserved.</p>
     </footer>
+    <script src="portfolio.js"></script>
 </body>
 </html>
